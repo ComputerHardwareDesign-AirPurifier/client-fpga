@@ -1,0 +1,18 @@
+
+
+NET "clk" LOC = P123;
+NET "ena" LOC = P112;
+NET "reset_n" LOC = P99;
+NET "duty[7]" LOC = P55;
+NET "duty[6]" LOC = P56;
+NET "duty[5]" LOC = P57;
+NET "duty[4]" LOC = P58;
+NET "duty[3]" LOC = P59;
+NET "duty[2]" LOC = P61;
+NET "duty[1]" LOC = P62;
+NET "duty[0]" LOC = P66;
+
+# PlanAhead Generated physical constraints 
+
+NET "pwm_out[0]" LOC = P6;
+NET "pwm_n_out[0]" LOC = P81;

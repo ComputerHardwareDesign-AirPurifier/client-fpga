@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Tue May 24 19:08:20 2022
+# Process ID: 17156
+# Log file: C:/Users/Phol/Documents/ComHardAssignment/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Phol/Documents/ComHardAssignment/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/Phol/Documents/ComHardAssignment/pa.fromNetlist.tcl

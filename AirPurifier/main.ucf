@@ -1,0 +1,13 @@
+
+
+NET "pwm_pwm_out[0]" LOC = P6;
+NET "pwm_pwm_n_out[0]" LOC = P81;
+
+# PlanAhead Generated physical constraints 
+
+NET "main_clk" LOC = P123;
+NET "pwm_ena" LOC = P112;
+NET "pwm_reset_n" LOC = P111;
+NET "uart_rx" LOC = P97;
+NET "uart_tx" LOC = P98;
+NET "uart_reset_n" LOC = P104;

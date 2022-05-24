@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue May 24 19:32:30 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "pwm_reset_n" LOCATE = SITE "P111" LEVEL 1;
+COMP "pwm_pwm_n_out<0>" LOCATE = SITE "P81" LEVEL 1;
+COMP "pwm_ena" LOCATE = SITE "P112" LEVEL 1;
+COMP "main_clk" LOCATE = SITE "P123" LEVEL 1;
+COMP "pwm_pwm_out<0>" LOCATE = SITE "P6" LEVEL 1;
+COMP "uart_reset_n" LOCATE = SITE "P104" LEVEL 1;
+COMP "uart_rx" LOCATE = SITE "P97" LEVEL 1;
+COMP "uart_tx" LOCATE = SITE "P98" LEVEL 1;
+SCHEMATIC END;
+

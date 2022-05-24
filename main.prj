@@ -1,0 +1,4 @@
+vhdl work "AirPurifier/uart.vhd"
+vhdl work "AirPurifier/pwm.vhd"
+vhdl work "AirPurifier/decoder8to8.vhd"
+vhdl work "AirPurifier/main.vhd"
