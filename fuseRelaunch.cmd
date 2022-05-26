@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Phol/Documents/ComHardAssignment/pwm_tb_isim_beh.exe" -prj "C:/Users/Phol/Documents/ComHardAssignment/pwm_tb_beh.prj" "work.pwm_tb" 

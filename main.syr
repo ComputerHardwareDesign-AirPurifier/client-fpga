@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.49 secs
+Total CPU time to Xst completion: 0.78 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.49 secs
+Total CPU time to Xst completion: 0.80 secs
  
 --> Reading design: main.prj
 
@@ -144,7 +144,7 @@ Synthesizing Unit <main>.
         uart_baud_rate = 19200
         uart_os_rate = 16
         uart_d_width = 8
-        uart_parity = 1
+        uart_parity = 0
         uart_parity_eo = '0'
     Summary:
 	no macro.
@@ -180,7 +180,7 @@ Synthesizing Unit <uart>.
         baud_rate = 19200
         os_rate = 16
         d_width = 8
-        parity = 1
+        parity = 0
         parity_eo = '0'
     Found 11-bit register for signal <count_baud>.
     Found 7-bit register for signal <count_os>.
@@ -188,16 +188,16 @@ Synthesizing Unit <uart>.
     Found 4-bit register for signal <rx_count>.
     Found 4-bit register for signal <tx_count>.
     Found 8-bit register for signal <rx_data>.
+    Found 1-bit register for signal <tx_busy>.
+    Found 1-bit register for signal <tx>.
     Found 1-bit register for signal <os_pulse>.
     Found 1-bit register for signal <rx_busy>.
     Found 1-bit register for signal <rx_error>.
     Found 1-bit register for signal <rx_state>.
     Found 1-bit register for signal <tx_state>.
     Found 1-bit register for signal <baud_pulse>.
-    Found 1-bit register for signal <tx_busy>.
-    Found 1-bit register for signal <tx>.
-    Found 10-bit register for signal <rx_buffer>.
-    Found 11-bit register for signal <tx_buffer>.
+    Found 9-bit register for signal <rx_buffer>.
+    Found 10-bit register for signal <tx_buffer>.
     Found 11-bit adder for signal <count_baud[10]_GND_8_o_add_1_OUT> created at line 76.
     Found 7-bit adder for signal <GND_8_o_GND_8_o_add_5_OUT> created at line 85.
     Found 4-bit adder for signal <os_count[3]_GND_8_o_add_18_OUT> created at line 127.
@@ -211,7 +211,7 @@ Synthesizing Unit <uart>.
     Found 4-bit comparator greater for signal <tx_count[3]_PWR_8_o_LessThan_50_o> created at line 182
     Summary:
 	inferred   5 Adder/Subtractor(s).
-	inferred  67 D-type flip-flop(s).
+	inferred  65 D-type flip-flop(s).
 	inferred   6 Comparator(s).
 	inferred  17 Multiplexer(s).
 Unit <uart> synthesized.
@@ -237,12 +237,13 @@ Macro Statistics
 # Registers                                            : 21
  1-bit register                                        : 10
  10-bit register                                       : 1
- 11-bit register                                       : 2
+ 11-bit register                                       : 1
  17-bit register                                       : 2
  18-bit register                                       : 1
  4-bit register                                        : 3
  7-bit register                                        : 1
  8-bit register                                        : 1
+ 9-bit register                                        : 1
 # Comparators                                          : 8
  11-bit comparator greater                             : 1
  18-bit comparator equal                               : 1
@@ -252,14 +253,12 @@ Macro Statistics
 # Multiplexers                                         : 20
  1-bit 2-to-1 multiplexer                              : 5
  10-bit 2-to-1 multiplexer                             : 1
- 11-bit 2-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 1
  18-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 7
  7-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 2
-# Xors                                                 : 2
- 1-bit xor10                                           : 1
- 1-bit xor9                                            : 1
+ 9-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -291,8 +290,8 @@ Macro Statistics
  11-bit up counter                                     : 1
  18-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 88
- Flip-Flops                                            : 88
+# Registers                                            : 86
+ Flip-Flops                                            : 86
 # Comparators                                          : 8
  11-bit comparator greater                             : 1
  18-bit comparator equal                               : 1
@@ -302,13 +301,10 @@ Macro Statistics
 # Multiplexers                                         : 20
  1-bit 2-to-1 multiplexer                              : 9
  10-bit 2-to-1 multiplexer                             : 1
- 11-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 5
  7-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 2
-# Xors                                                 : 2
- 1-bit xor10                                           : 1
- 1-bit xor9                                            : 1
+ 9-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -333,8 +329,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 120
- Flip-Flops                                            : 120
+# Registers                                            : 118
+ Flip-Flops                                            : 118
 
 =========================================================================
 
@@ -357,22 +353,22 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 275
+# BELS                             : 269
 #      GND                         : 1
 #      INV                         : 17
 #      LUT1                        : 22
-#      LUT2                        : 13
-#      LUT3                        : 26
-#      LUT4                        : 9
-#      LUT5                        : 36
-#      LUT6                        : 31
+#      LUT2                        : 14
+#      LUT3                        : 24
+#      LUT4                        : 7
+#      LUT5                        : 37
+#      LUT6                        : 27
 #      MUXCY                       : 65
 #      VCC                         : 1
 #      XORCY                       : 54
-# FlipFlops/Latches                : 120
+# FlipFlops/Latches                : 118
 #      FDC                         : 40
 #      FDCE                        : 23
-#      FDE                         : 55
+#      FDE                         : 53
 #      FDP                         : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -389,15 +385,15 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             120  out of  11440     1%  
- Number of Slice LUTs:                  154  out of   5720     2%  
-    Number used as Logic:               154  out of   5720     2%  
+ Number of Slice Registers:             118  out of  11440     1%  
+ Number of Slice LUTs:                  148  out of   5720     2%  
+    Number used as Logic:               148  out of   5720     2%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    196
-   Number with an unused Flip Flop:      76  out of    196    38%  
-   Number with an unused LUT:            42  out of    196    21%  
-   Number of fully used LUT-FF pairs:    78  out of    196    39%  
+ Number of LUT Flip Flop pairs used:    190
+   Number with an unused Flip Flop:      72  out of    190    37%  
+   Number with an unused LUT:            42  out of    190    22%  
+   Number of fully used LUT-FF pairs:    76  out of    190    40%  
    Number of unique control sets:        11
 
 IO Utilization: 
@@ -429,7 +425,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-main_clk                           | BUFGP                  | 120   |
+main_clk                           | BUFGP                  | 118   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -441,7 +437,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 7.666ns (Maximum Frequency: 130.450MHz)
-   Minimum input arrival time before clock: 4.327ns
+   Minimum input arrival time before clock: 4.300ns
    Maximum output required time after clock: 3.975ns
    Maximum combinational path delay: No path found
 
@@ -452,7 +448,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'main_clk'
   Clock period: 7.666ns (frequency: 130.450MHz)
-  Total number of paths / destination ports: 9064 / 181
+  Total number of paths / destination ports: 8958 / 177
 -------------------------------------------------------------------------
 Delay:               7.666ns (Levels of Logic = 12)
   Source:            uart_module/rx_data_5 (FF)
@@ -484,24 +480,24 @@ Delay:               7.666ns (Levels of Logic = 12)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'main_clk'
-  Total number of paths / destination ports: 191 / 146
+  Total number of paths / destination ports: 179 / 143
 -------------------------------------------------------------------------
-Offset:              4.327ns (Levels of Logic = 3)
+Offset:              4.300ns (Levels of Logic = 3)
   Source:            uart_rx (PAD)
-  Destination:       uart_module/rx_buffer_9 (FF)
+  Destination:       uart_module/rx_buffer_8 (FF)
   Destination Clock: main_clk rising
 
-  Data Path: uart_rx to uart_module/rx_buffer_9
+  Data Path: uart_rx to uart_module/rx_buffer_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             8   1.222   0.803  uart_rx_IBUF (uart_rx_IBUF)
-     LUT6:I5->O            5   0.205   0.715  uart_module/_n0236_inv21 (uart_module/_n0236_inv2)
-     LUT2:I1->O           10   0.205   0.856  uart_module/_n0236_inv1 (uart_module/_n0236_inv)
+     LUT6:I5->O            5   0.205   0.715  uart_module/_n0219_inv21 (uart_module/_n0219_inv2)
+     LUT2:I1->O            9   0.205   0.829  uart_module/_n0219_inv1 (uart_module/_n0219_inv)
      FDE:CE                    0.322          uart_module/rx_buffer_0
     ----------------------------------------
-    Total                      4.327ns (1.954ns logic, 2.373ns route)
-                                       (45.2% logic, 54.8% route)
+    Total                      4.300ns (1.954ns logic, 2.346ns route)
+                                       (45.4% logic, 54.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'main_clk'
@@ -538,12 +534,12 @@ main_clk       |    7.666|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 16.09 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 21.50 secs
  
 --> 
 
-Total memory usage is 4516980 kilobytes
+Total memory usage is 4516964 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

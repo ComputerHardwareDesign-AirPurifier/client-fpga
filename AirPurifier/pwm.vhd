@@ -29,9 +29,9 @@ USE ieee.std_logic_unsigned.all;
 
 ENTITY pwm IS
   GENERIC(
-      sys_clk         : INTEGER ; --system clock frequency in Hz
-      pwm_freq        : INTEGER ;    --PWM switching frequency in Hz
-      bits_resolution : INTEGER ;          --bits of resolution setting the duty cycle
+      sys_clk         : INTEGER; --system clock frequency in Hz
+      pwm_freq        : INTEGER;    --PWM switching frequency in Hz
+      bits_resolution : INTEGER;          --bits of resolution setting the duty cycle
       phases          : INTEGER);         --number of output pwms and phases
   PORT(
       clk       : IN  STD_LOGIC;                                    --system clock

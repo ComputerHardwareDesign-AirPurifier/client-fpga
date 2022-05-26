@@ -163,7 +163,7 @@ BEGIN
       CASE tx_state IS
         WHEN idle =>                                              --idle state
           IF(tx_ena = '1') THEN                                     --new transaction latched in
-            tx_buffer(d_width+1 DOWNTO 0) <=  tx_data & '0' & '1';    --latch in data for transmission and start/stop bits
+            tx_buffer(d_width+1 DOWNTO 0) <= '1'& tx_data & '0' ;    --latch in data for transmission and start/stop bits
             IF(parity = 1) THEN                                       --if parity is used
               tx_buffer(parity+d_width+1) <= tx_parity(d_width);        --latch in parity bit from parity logic
             END IF;

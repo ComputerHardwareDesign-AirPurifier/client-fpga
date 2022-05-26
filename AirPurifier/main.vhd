@@ -42,7 +42,7 @@ entity main is
 		uart_baud_rate :  INTEGER    := 19_200;      --data link baud rate in bits/second
 		uart_os_rate   :  INTEGER    := 16;          --oversampling rate to find center of receive bits (in samples per baud period)
 		uart_d_width   :  INTEGER    := 8;           --data bus width
-		uart_parity    :  INTEGER    := 1;           --0 for no parity, 1 for parity
+		uart_parity    :  INTEGER    := 0;           --0 for no parity, 1 for parity
 		uart_parity_eo :  STD_LOGIC  := '0');        --'0' for even, '1' for odd parity
   PORT(
  --pwm
